@@ -12,8 +12,8 @@ export function HeroSection() {
       <div className="relative z-10 w-full max-w-container-max mx-auto grid grid-cols-12 gap-gutter">
         <div className="col-span-12 md:col-span-10 md:col-start-2 text-center flex flex-col items-center">
           <h1 
-            className="font-h1-display text-h1-display text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500 uppercase glitch-text mb-stack-md" 
-            data-text="SINAL PERDIDO"
+            className="font-h1-display text-[clamp(2.5rem,10vw,96px)] leading-[0.9] text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500 uppercase glitch-text mb-stack-md tracking-[-0.04em] font-bold" 
+            data-text="SINAL PERDIDO NO VAZIO"
           >
             SINAL PERDIDO<br/>NO VAZIO
           </h1>
