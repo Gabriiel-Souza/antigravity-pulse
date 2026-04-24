@@ -27,9 +27,9 @@ export function AudioPlayer() {
       
       <button 
         onClick={togglePlay}
-        className="w-10 h-10 rounded-full border border-cyan-400 flex items-center justify-center text-cyan-400 hover:bg-cyan-400 hover:text-black transition-colors"
+        className="w-12 h-12 flex-shrink-0 rounded-full border border-cyan-400 flex items-center justify-center text-cyan-400 hover:bg-cyan-400 hover:text-black transition-colors"
       >
-        <span className="material-symbols-outlined">
+        <span className="material-symbols-outlined text-[24px]">
           {isPlaying ? "pause" : "play_arrow"}
         </span>
       </button>
