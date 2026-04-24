@@ -14,7 +14,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark" suppressHydrationWarning>
       <body className="antialiased selection:bg-cyan-400/30 selection:text-cyan-400">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
         <div className="noise-overlay" />
         {children}
       </body>
