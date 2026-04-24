@@ -5,9 +5,6 @@ import { Button } from "@/components/ui/button";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
-      {/* Noise Overlay */}
-      <div className="absolute inset-0 bg-noise pointer-events-none" />
-      
       {/* Background Gradients */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full" />
@@ -19,7 +16,7 @@ export function HeroSection() {
           </span>
         </div>
 
-        <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.9] font-bold mb-8">
+        <h1 className="text-[clamp(3rem,8vw,96px)] leading-[0.9] font-bold mb-8 tracking-[-0.04em] uppercase">
           SINAL <span className="text-primary text-glow-primary">PERDIDO</span>
           <br />
           NO <span className="text-secondary text-glow-secondary italic">VAZIO</span>

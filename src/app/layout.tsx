@@ -28,7 +28,8 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${epilogue.variable} dark`}
       suppressHydrationWarning
     >
-      <body className="bg-background text-foreground font-body antialiased">
+      <body className="bg-background text-foreground font-body antialiased relative">
+        <div className="fixed inset-0 bg-noise pointer-events-none z-[-1] opacity-50" />
         {children}
       </body>
     </html>
