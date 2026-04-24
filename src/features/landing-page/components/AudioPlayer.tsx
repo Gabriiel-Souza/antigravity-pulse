@@ -21,7 +21,7 @@ export function AudioPlayer() {
     <div className="fixed bottom-8 right-8 z-50 bg-surface-container-high border border-cyan-400/30 p-4 flex items-center gap-4 shadow-[0_0_15px_rgba(0,0,0,0.8)] clip-corner">
       <audio 
         ref={audioRef} 
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" 
+        src="/audio/AGST-Topic.mp3"
         loop
       />
       
@@ -36,7 +36,7 @@ export function AudioPlayer() {
       
       <div className="flex flex-col">
         <span className="font-label-mono text-[10px] text-cyan-400 uppercase tracking-widest">TOCANDO AGORA</span>
-        <span className="font-body-md text-sm text-white font-bold">MOLLONO.BASS - THE ORACLE</span>
+        <span className="font-body-md text-sm text-white font-bold">AGST - Fate</span>
       </div>
       
       <div className="flex gap-1 items-end h-4 ml-4">
