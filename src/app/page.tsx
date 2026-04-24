@@ -3,6 +3,7 @@ import { HeroSection } from "@/features/landing-page/components/HeroSection";
 import { LineupSection } from "@/features/landing-page/components/LineupSection";
 import { StagesSection } from "@/features/landing-page/components/StagesSection";
 import { TicketsSection } from "@/features/landing-page/components/TicketsSection";
+import { InfoSection } from "@/features/landing-page/components/InfoSection";
 import { Footer } from "@/features/landing-page/components/Footer";
 import { AudioPlayer } from "@/features/landing-page/components/AudioPlayer";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <LineupSection />
       <StagesSection />
       <TicketsSection />
+      <InfoSection />
       <Footer />
       <AudioPlayer />
     </main>
