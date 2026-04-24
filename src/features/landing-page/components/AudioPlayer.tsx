@@ -21,7 +21,7 @@ export function AudioPlayer() {
     <div className="fixed bottom-8 right-8 z-50 bg-surface-container-high border border-cyan-400/30 p-4 flex items-center gap-4 shadow-[0_0_15px_rgba(0,0,0,0.8)] clip-corner">
       <audio 
         ref={audioRef} 
-        src="/audio/AGST-Topic.mp3"
+        src="/antigravity-pulse/audio/AGST-Topic.mp3"
         loop
       />
       
