@@ -2,20 +2,26 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useActiveSection } from "@/hooks/use-active-section";
 
 export function Navbar() {
+  const activeSection = useActiveSection(["lineup", "stages", "tickets", "info"]);
+
   const navLinks = [
-    { name: "LINE-UP", href: "#lineup", active: true },
-    { name: "PALCOS", href: "#stages" },
-    { name: "INGRESSOS", href: "#tickets" },
-    { name: "INFO", href: "#info" },
+    { name: "LINE-UP", href: "#lineup", id: "lineup" },
+    { name: "PALCOS", href: "#stages", id: "stages" },
+    { name: "INGRESSOS", href: "#tickets", id: "tickets" },
+    { name: "INFO", href: "#info", id: "info" },
   ];
 
   return (
     <>
       {/* TopNavBar Desktop */}
       <nav className="fixed top-0 w-full z-50 border-b border-cyan-400/30 bg-black/10 backdrop-blur-lg hidden md:flex justify-between items-center px-12 py-4 shadow-[0_0_20px_rgba(0,240,255,0.15)]">
-        <div className="text-2xl font-black text-cyan-400 italic tracking-tighter">
+        <div 
+          className="text-2xl font-black text-cyan-400 italic tracking-tighter cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
           ANTIGRAVITY PULSE
         </div>
         
@@ -24,8 +30,8 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`font-space-grotesk uppercase tracking-tighter font-black transition-colors ${
-                link.active 
+              className={`font-space-grotesk uppercase tracking-tighter font-black transition-colors cursor-pointer ${
+                activeSection === link.id
                 ? "text-cyan-400 border-b-2 border-cyan-400 pb-1" 
                 : "text-white/80 hover:text-cyan-400"
               }`}

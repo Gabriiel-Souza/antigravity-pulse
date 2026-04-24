@@ -22,7 +22,7 @@ export function Footer() {
             <Link
               key={link.name}
               href={link.href}
-              className={`font-space-grotesk text-xs tracking-[0.2em] uppercase transition-transform hover:text-purple-400 hover:translate-x-1 focus:outline-none focus:ring-1 focus:ring-cyan-400 ${
+              className={`font-space-grotesk text-xs tracking-[0.2em] uppercase transition-transform hover:text-purple-400 hover:translate-x-1 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer ${
                 link.active ? "text-cyan-400" : "text-zinc-600"
               }`}
             >
@@ -32,7 +32,7 @@ export function Footer() {
         </div>
 
         <div className="font-space-grotesk text-xs tracking-[0.2em] uppercase text-zinc-600">
-          ©2024 ANTIGRAVITY PULSE. SINAL PERDIDO NO VAZIO.
+          ©2026 ANTIGRAVITY PULSE. SINAL PERDIDO NO VAZIO.
         </div>
       </div>
     </footer>
