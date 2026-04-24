@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { name: "LINE-UP", href: "#lineup" },
-  { name: "STAGES", href: "#stages" },
-  { name: "TICKETS", href: "#tickets" },
+  { name: "PALCOS", href: "#stages" },
+  { name: "INGRESSOS", href: "#tickets" },
   { name: "INFO", href: "#info" },
 ];
 
@@ -31,7 +31,7 @@ export function Navbar() {
         </div>
 
         <Button className="font-heading tracking-widest uppercase px-8" variant="secondary">
-          GET TICKETS
+          COMPRAR INGRESSOS
         </Button>
       </div>
     </nav>

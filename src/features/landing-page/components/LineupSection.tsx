@@ -16,7 +16,7 @@ export function LineupSection() {
         <div className="mb-20">
           <h2 className="text-5xl md:text-7xl font-bold mb-4">
             LINE-UP<span className="text-primary">.</span>
-            <span className="block text-2xl font-normal text-foreground/40 mt-2">PHASE 01 // TRANSMITTING DATA</span>
+            <span className="block text-2xl font-normal text-foreground/40 mt-2">FASE 01 // TRANSMITINDO DADOS</span>
           </h2>
         </div>
 
@@ -50,7 +50,7 @@ export function LineupSection() {
         <div className="mt-20 flex justify-center">
           <div className="p-8 border border-white/5 bg-black/40 max-w-xl text-center">
             <p className="font-heading text-xs tracking-widest text-foreground/60 leading-relaxed">
-              MORE TRANSMISSIONS PENDING. PHASE 02 DECRYPTION SCHEDULED FOR 15.05. SIGNAL INTEGRETITY: 94%.
+              MAIS TRANSMISSÕES PENDENTES. DESCRIPTOGRAFIA DA FASE 02 AGENDADA PARA 15.05. INTEGRIDADE DO SINAL: 94%.
             </p>
           </div>
         </div>

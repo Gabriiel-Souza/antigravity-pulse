@@ -37,9 +37,9 @@ export function Footer() {
 
           <div className="text-center md:text-right">
             <p className="font-heading text-[10px] tracking-widest text-foreground/20">
-              © 2026 ANTIGRAVITY PULSE. ALL RIGHTS RESERVED.
+              © 2026 ANTIGRAVITY PULSE. TODOS OS DIREITOS RESERVADOS.
               <br />
-              DESIGNED FOR THE FUTURE.
+              PROJETADO PARA O FUTURO.
             </p>
           </div>
         </div>

@@ -5,41 +5,41 @@ import { Button } from "@/components/ui/button";
 
 const tiers = [
   {
-    name: "CORE ACCESS",
-    price: "149",
-    description: "Standard entry protocol.",
+    name: "ACESSO CORE",
+    price: "399",
+    description: "Protocolo padrão de entrada.",
     features: [
-      { text: "2-Day Festival Access", included: true },
-      { text: "Main Stage + Void Room", included: true },
-      { text: "Digital Merch Pack", included: true },
-      { text: "VIP Logistics", included: false },
+      { text: "Acesso de 2 dias ao festival", included: true },
+      { text: "Palco Principal + Sala do Vazio", included: true },
+      { text: "Pacote de Merch Digital", included: true },
+      { text: "Logística VIP", included: false },
     ],
     accent: "border-white/10",
   },
   {
     name: "PULSE ELITE",
-    price: "299",
-    description: "Enhanced sensory experience.",
+    price: "799",
+    description: "Experiência sensorial aprimorada.",
     features: [
-      { text: "2-Day Festival Access", included: true },
-      { text: "All Stages + VIP Decks", included: true },
-      { text: "Priority Entry Line", included: true },
-      { text: "Dedicated Bars", included: true },
-      { text: "Backstage Lounge Access", included: false },
+      { text: "Acesso de 2 dias ao festival", included: true },
+      { text: "Todos os Palcos + Decks VIP", included: true },
+      { text: "Fila de Entrada Prioritária", included: true },
+      { text: "Bares Dedicados", included: true },
+      { text: "Acesso ao Lounge Backstage", included: false },
     ],
     accent: "border-primary shadow-[0_0_30px_rgba(0,240,255,0.1)]",
     popular: true,
   },
   {
-    name: "VOID COMMAND",
-    price: "599",
-    description: "Total control over the descent.",
+    name: "COMANDO DO VAZIO",
+    price: "1.599",
+    description: "Controle total sobre a descida.",
     features: [
-      { text: "All VIP Benefits", included: true },
-      { text: "Backstage Lounge Access", included: true },
-      { text: "Artist Meet & Greets", included: true },
-      { text: "Exclusive Merch Pack", included: true },
-      { text: "On-site Storage", included: true },
+      { text: "Todos os Benefícios VIP", included: true },
+      { text: "Acesso ao Lounge Backstage", included: true },
+      { text: "Encontro com Artistas", included: true },
+      { text: "Pacote de Merch Exclusivo", included: true },
+      { text: "Armazenamento no Local", included: true },
     ],
     accent: "border-secondary shadow-[0_0_30px_rgba(188,0,255,0.1)]",
   },
@@ -50,8 +50,8 @@ export function TicketsSection() {
     <section id="tickets" className="py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6">ACCESS PROTOCOLS</h2>
-          <p className="text-foreground/40 font-heading tracking-widest text-sm uppercase">Secure your authorization for the 48-hour descent.</p>
+          <h2 className="text-5xl md:text-7xl font-bold mb-6">PROTOCOLOS DE ACESSO</h2>
+          <p className="text-foreground/40 font-heading tracking-widest text-sm uppercase">Garanta sua autorização para a descida de 48 horas.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -64,8 +64,8 @@ export function TicketsSection() {
                 <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                 <p className="font-heading text-xs text-foreground/40 tracking-wider mb-6">{tier.description}</p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold font-heading">€{tier.price}</span>
-                  <span className="text-foreground/40 text-xs font-heading">/UNIT</span>
+                  <span className="text-4xl font-bold font-heading">R${tier.price}</span>
+                  <span className="text-foreground/40 text-xs font-heading">/UNIDADE</span>
                 </div>
               </div>
 
@@ -88,7 +88,7 @@ export function TicketsSection() {
                 variant={tier.popular ? "default" : "outline"}
                 className={`w-full h-14 font-bold tracking-[0.2em] uppercase ${tier.popular ? '' : 'bg-transparent'}`}
               >
-                INITIALIZE PURCHASE
+                INICIALIZAR COMPRA
               </Button>
             </div>
           ))}

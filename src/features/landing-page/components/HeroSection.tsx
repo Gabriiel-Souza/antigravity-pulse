@@ -15,26 +15,26 @@ export function HeroSection() {
       <div className="container relative z-10 px-6 flex flex-col items-center text-center">
         <div className="mb-6 py-1 px-3 border border-primary/30 bg-primary/5">
           <span className="font-heading text-[10px] tracking-[0.3em] text-primary">
-            TRANSMISSION INCOMING // COORDINATES LOCKED
+            TRANSMISSÃO RECEBIDA // COORDENADAS BLOQUEADAS
           </span>
         </div>
 
         <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.9] font-bold mb-8">
-          SIGNAL <span className="text-primary text-glow-primary">LOST</span>
+          SINAL <span className="text-primary text-glow-primary">PERDIDO</span>
           <br />
-          IN THE <span className="text-secondary text-glow-secondary italic">VOID</span>
+          NO <span className="text-secondary text-glow-secondary italic">VAZIO</span>
         </h1>
 
         <p className="max-w-2xl font-body text-xl text-foreground/60 mb-12">
-          A multi-sensory descent into futuristic brutalism. 48 hours of uninterrupted electronic frequencies, transmitting raw data from the underground.
+          Uma descida multissensorial ao brutalismo futurista. 48 horas de frequências eletrônicas ininterruptas, transmitindo dados brutos do underground.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Button size="xl" className="font-bold tracking-widest">
-            ENTER THE VOID
+            ENTRAR NO VAZIO
           </Button>
           <Button size="xl" variant="outline" className="font-bold tracking-widest">
-            VIEW LINE-UP
+            VER LINE-UP
           </Button>
         </div>
       </div>
@@ -50,7 +50,7 @@ export function HeroSection() {
       <div className="absolute bottom-10 right-10 hidden lg:block text-right">
         <div className="font-heading text-[10px] tracking-widest text-foreground/30 flex flex-col gap-2">
           <span>FREQ: 140.00 BPM</span>
-          <span>STATUS: STABLE</span>
+          <span>STATUS: ESTÁVEL</span>
         </div>
       </div>
     </section>
