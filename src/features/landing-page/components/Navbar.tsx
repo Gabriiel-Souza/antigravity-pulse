@@ -3,37 +3,50 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const navLinks = [
-  { name: "LINE-UP", href: "#lineup" },
-  { name: "PALCOS", href: "#stages" },
-  { name: "INGRESSOS", href: "#tickets" },
-  { name: "INFO", href: "#info" },
-];
-
 export function Navbar() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-white/10 backdrop-blur-[20px]">
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="font-heading text-2xl font-bold tracking-tighter text-primary">
-          ANTIGRAVITY<span className="text-white">PULSE</span>
-        </Link>
+  const navLinks = [
+    { name: "LINE-UP", href: "#lineup", active: true },
+    { name: "PALCOS", href: "#stages" },
+    { name: "INGRESSOS", href: "#tickets" },
+    { name: "INFO", href: "#info" },
+  ];
 
-        <div className="hidden md:flex items-center gap-8">
+  return (
+    <>
+      {/* TopNavBar Desktop */}
+      <nav className="fixed top-0 w-full z-50 border-b border-cyan-400/30 bg-black/10 backdrop-blur-lg hidden md:flex justify-between items-center px-12 py-4 shadow-[0_0_20px_rgba(0,240,255,0.15)]">
+        <div className="text-2xl font-black text-cyan-400 italic tracking-tighter">
+          ANTIGRAVITY PULSE
+        </div>
+        
+        <div className="flex gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="font-heading text-sm font-semibold tracking-widest text-foreground/70 hover:text-primary transition-colors"
+              className={`font-space-grotesk uppercase tracking-tighter font-black transition-colors ${
+                link.active 
+                ? "text-cyan-400 border-b-2 border-cyan-400 pb-1" 
+                : "text-white/80 hover:text-cyan-400"
+              }`}
             >
               {link.name}
             </Link>
           ))}
         </div>
 
-        <Button className="font-heading tracking-widest uppercase px-8" variant="secondary">
-          COMPRAR INGRESSOS
-        </Button>
+        <button className="bg-cyan-400 text-black px-6 py-2 font-space-grotesk uppercase tracking-tighter font-black hover:skew-x-[-12deg] hover:bg-cyan-400 hover:text-black transition-all duration-75 active:scale-95 ease-in">
+          GET TICKETS
+        </button>
+      </nav>
+
+      {/* Mobile Nav Anchor (Minimal) */}
+      <div className="fixed top-0 w-full z-50 border-b border-cyan-400/30 bg-black/50 backdrop-blur-lg flex justify-between items-center px-6 py-4 md:hidden">
+        <div className="text-xl font-black text-cyan-400 italic tracking-tighter">
+          ANTIGRAVITY PULSE
+        </div>
+        <span className="material-symbols-outlined text-cyan-400">menu</span>
       </div>
-    </nav>
+    </>
   );
 }

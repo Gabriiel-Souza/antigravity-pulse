@@ -1,108 +1,97 @@
 "use client";
 
 import { Check, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-const tiers = [
-  {
-    name: "ACESSO CORE",
-    price: "399",
-    description: "Protocolo padrão de entrada.",
-    features: [
-      { text: "Acesso de 2 dias ao festival", included: true },
-      { text: "Palco Principal + Sala do Vazio", included: true },
-      { text: "Pacote de Merch Digital", included: true },
-      { text: "Logística VIP", included: false },
-    ],
-    accent: "border-white/10",
-  },
-  {
-    name: "PULSE ELITE",
-    price: "799",
-    description: "Experiência sensorial aprimorada.",
-    features: [
-      { text: "Acesso de 2 dias ao festival", included: true },
-      { text: "Todos os Palcos + Decks VIP", included: true },
-      { text: "Fila de Entrada Prioritária", included: true },
-      { text: "Bares Dedicados", included: true },
-      { text: "Acesso ao Lounge Backstage", included: false },
-    ],
-    accent: "border-primary shadow-[0_0_30px_rgba(0,240,255,0.1)]",
-    popular: true,
-  },
-  {
-    name: "COMANDO DO VAZIO",
-    price: "1.599",
-    description: "Controle total sobre a descida.",
-    features: [
-      { text: "Todos os Benefícios VIP", included: true },
-      { text: "Acesso ao Lounge Backstage", included: true },
-      { text: "Encontro com Artistas", included: true },
-      { text: "Pacote de Merch Exclusivo", included: true },
-      { text: "Armazenamento no Local", included: true },
-    ],
-    accent: "border-secondary shadow-[0_0_30px_rgba(188,0,255,0.1)]",
-  },
-];
 
 export function TicketsSection() {
   return (
-    <section id="tickets" className="py-32 bg-background border-t border-white/5">
-      <div className="container mx-auto px-6">
-        <div className="mb-24">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6">PROTOCOLOS DE ACESSO</h2>
-          <p className="text-foreground/40 font-heading tracking-widest text-sm uppercase">Garanta sua autorização para a descida de 48 horas.</p>
+    <section className="py-section-gap px-margin w-full max-w-container-max mx-auto" id="tickets">
+      <h2 className="font-h2-headline text-h2-headline text-center text-on-surface uppercase mb-stack-lg tracking-tighter">
+        PROTOCOLOS DE ACESSO
+      </h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-outline/20 relative">
+        {/* Vertical Separators */}
+        <div className="hidden md:block absolute top-0 bottom-0 left-1/3 w-[1px] bg-outline/20"></div>
+        <div className="hidden md:block absolute top-0 bottom-0 right-1/3 w-[1px] bg-outline/20"></div>
+
+        {/* Tier 1 */}
+        <div className="p-8 flex flex-col group border-b md:border-b-0 border-outline/20 hover:bg-surface-container-low transition-colors">
+          <div className="font-label-mono text-label-mono text-outline mb-4 uppercase">ENTRADA PADRÃO</div>
+          <div className="font-h1-display text-h1-display text-white mb-8 group-hover:text-cyan-400 transition-colors">R$399</div>
+          <ul className="font-body-md text-body-md text-on-surface-variant space-y-4 mb-stack-md flex-grow">
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-cyan-400 text-sm">check</span> 
+              Acesso de 2 dias ao festival
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-cyan-400 text-sm">check</span> 
+              Palco Principal + Sala do Vazio
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-outline text-sm">close</span> 
+              Logística VIP
+            </li>
+          </ul>
+          <button className="w-full py-4 border border-cyan-400/50 text-cyan-400 font-label-mono uppercase hover:bg-cyan-400 hover:text-black transition-colors rounded-none">
+            SELECIONAR
+          </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3">
-          {tiers.map((tier, index) => (
-            <div 
-              key={index} 
-              className={`relative p-12 flex flex-col border-white/10 ${
-                index !== tiers.length - 1 ? 'lg:border-r' : ''
-              } ${
-                tier.popular ? 'border-t-4 border-t-primary' : 'border-t border-t-white/10'
-              }`}
-            >
-              <div className="mb-12">
-                <h3 className="text-2xl font-bold mb-2 tracking-tighter">{tier.name}</h3>
-                <p className="font-heading text-[10px] text-foreground/40 tracking-[0.2em] uppercase">{tier.description}</p>
-              </div>
+        {/* Tier 2 (Highlighted) */}
+        <div className="p-8 flex flex-col relative bg-surface-container-low border-t-4 border-cyan-400 shadow-[0_-4px_20px_rgba(0,240,255,0.15)] border-b md:border-b-0 border-outline/20">
+          <div className="font-label-mono text-label-mono text-cyan-400 mb-4 flex justify-between uppercase">
+            <span>ACESSO VIP</span> 
+            <span className="bg-cyan-400/20 px-2 py-1 text-[10px]">RECOMENDADO</span>
+          </div>
+          <div className="font-h1-display text-h1-display text-white mb-8">R$799</div>
+          <ul className="font-body-md text-body-md text-on-surface-variant space-y-4 mb-stack-md flex-grow">
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-cyan-400 text-sm">check</span> 
+              Acesso de 2 dias ao festival
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-cyan-400 text-sm">check</span> 
+              Todos os Palcos + Decks VIP
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-cyan-400 text-sm">check</span> 
+              Fila de Entrada Prioritária
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-cyan-400 text-sm">check</span> 
+              Bares Dedicados
+            </li>
+          </ul>
+          <button className="w-full py-4 bg-cyan-400 text-black font-label-mono uppercase hover:bg-white transition-colors rounded-none glow-cyan">
+            SELECIONAR
+          </button>
+        </div>
 
-              <div className="mb-12">
-                <div className="flex items-baseline gap-1">
-                  <span className={`${tier.popular ? 'text-[96px]' : 'text-6xl'} font-bold font-heading tracking-tighter transition-all`}>
-                    R${tier.price}
-                  </span>
-                  <span className="text-foreground/40 text-[10px] font-heading tracking-widest">/UNIDADE</span>
-                </div>
-              </div>
-
-              <div className="flex-grow space-y-6 mb-12">
-                {tier.features.map((feature, fIndex) => (
-                  <div key={fIndex} className="flex items-center gap-4">
-                    {feature.included ? (
-                      <Check className="size-4 text-primary" />
-                    ) : (
-                      <X className="size-4 text-foreground/20" />
-                    )}
-                    <span className={`font-heading text-xs tracking-widest ${feature.included ? 'text-foreground/80' : 'text-foreground/20'}`}>
-                      {feature.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <Button 
-                variant={tier.popular ? "default" : "outline"}
-                className={`w-full h-16 font-bold tracking-[0.3em] uppercase transition-all duration-300 ${
-                  tier.popular ? 'hover:shadow-[0_0_30px_rgba(0,240,255,0.4)]' : 'bg-transparent hover:border-primary hover:text-primary'
-                }`}
-              >
-                INICIALIZAR COMPRA
-              </Button>
-            </div>
-          ))}
+        {/* Tier 3 */}
+        <div className="p-8 flex flex-col group hover:bg-surface-container-low transition-colors">
+          <div className="font-label-mono text-label-mono text-purple-400 mb-4 uppercase">PASSE BACKSTAGE</div>
+          <div className="font-h1-display text-h1-display text-white mb-8 group-hover:text-purple-400 transition-colors">R$1.599</div>
+          <ul className="font-body-md text-body-md text-on-surface-variant space-y-4 mb-stack-md flex-grow">
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-purple-400 text-sm">check</span> 
+              Todos os Benefícios VIP
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-purple-400 text-sm">check</span> 
+              Acesso ao Lounge Backstage
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-purple-400 text-sm">check</span> 
+              Encontro com Artistas
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-purple-400 text-sm">check</span> 
+              Pacote de Merch Exclusivo
+            </li>
+          </ul>
+          <button className="w-full py-4 border border-purple-500/50 text-purple-400 font-label-mono uppercase hover:bg-purple-500 hover:text-white transition-colors rounded-none">
+            SELECIONAR
+          </button>
         </div>
       </div>
     </section>

@@ -2,46 +2,37 @@
 
 import Link from "next/link";
 
-const socialLinks = [
-  { name: "INSTAGRAM", href: "#" },
-  { name: "SPOTIFY", href: "#" },
-  { name: "DISCORD", href: "#" },
-  { name: "TWITTER", href: "#" },
-];
-
 export function Footer() {
+  const socialLinks = [
+    { name: "INSTAGRAM", href: "#", active: true },
+    { name: "SPOTIFY", href: "#" },
+    { name: "DISCORD", href: "#" },
+    { name: "TWITTER", href: "#" },
+  ];
+
   return (
-    <footer className="py-20 bg-black border-t border-white/5">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-12">
-          <div className="flex flex-col items-center md:items-start">
-            <Link href="/" className="font-heading text-xl font-bold tracking-tighter text-primary mb-4">
-              ANTIGRAVITY<span className="text-white">PULSE</span>
+    <footer className="w-full border-t border-purple-900/40 mt-[160px] bg-[#050505]">
+      <div className="max-w-[1440px] mx-auto px-12 py-20 flex flex-col md:flex-row justify-between items-start gap-8">
+        <div className="text-xl font-bold text-purple-600 uppercase">
+          ANTIGRAVITY PULSE
+        </div>
+        
+        <div className="flex flex-col md:flex-row gap-8">
+          {socialLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`font-space-grotesk text-xs tracking-[0.2em] uppercase transition-transform hover:text-purple-400 hover:translate-x-1 focus:outline-none focus:ring-1 focus:ring-cyan-400 ${
+                link.active ? "text-cyan-400" : "text-zinc-600"
+              }`}
+            >
+              {link.name}
             </Link>
-            <p className="font-heading text-[10px] tracking-widest text-foreground/30">
-              EST. 2026 // BERLIN UNDERGROUND
-            </p>
-          </div>
+          ))}
+        </div>
 
-          <div className="flex gap-8">
-            {socialLinks.map((link) => (
-              <Link 
-                key={link.name}
-                href={link.href}
-                className="font-heading text-[10px] tracking-[0.3em] text-foreground/40 hover:text-secondary transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center md:text-right">
-            <p className="font-heading text-[10px] tracking-widest text-foreground/20">
-              © 2026 ANTIGRAVITY PULSE. TODOS OS DIREITOS RESERVADOS.
-              <br />
-              PROJETADO PARA O FUTURO.
-            </p>
-          </div>
+        <div className="font-space-grotesk text-xs tracking-[0.2em] uppercase text-zinc-600">
+          ©2024 ANTIGRAVITY PULSE. SINAL PERDIDO NO VAZIO.
         </div>
       </div>
     </footer>

@@ -1,106 +1,103 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+@theme {
+  --color-background: #131313;
+  --color-surface: #131313;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #b9cacb;
+  --color-primary: #dbfcff;
+  --color-on-primary: #00363a;
+  --color-primary-container: #00f0ff;
+  --color-on-primary-container: #006970;
+  --color-secondary: #ebb2ff;
+  --color-on-secondary: #520071;
+  --color-secondary-container: #ce5dff;
+  --color-on-secondary-container: #480064;
+  --color-tertiary: #f5f5f5;
+  --color-outline: #849495;
+  --color-outline-variant: #3b494b;
 
-@theme inline {
-  --font-sans: var(--font-epilogue);
-  --font-heading: var(--font-space-grotesk);
-  --font-body: var(--font-epilogue);
+  --font-h1-display: "Space Grotesk", sans-serif;
+  --font-h2-headline: "Space Grotesk", sans-serif;
+  --font-h3-subhead: "Space Grotesk", sans-serif;
+  --font-label-mono: "Space Grotesk", sans-serif;
+  --font-body-lg: "Epilogue", sans-serif;
+  --font-body-md: "Epilogue", sans-serif;
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #050505;
-  --card: #f5f5f5;
-  --card-foreground: #050505;
-  --primary: #00b8c4;
-  --primary-foreground: #ffffff;
-  --secondary: #9d00d4;
-  --secondary-foreground: #ffffff;
-  --muted: #e2e2e2;
-  --muted-foreground: #454747;
-  --accent: #00b8c4;
-  --accent-foreground: #ffffff;
-  --border: #d9d9d9;
-  --input: #d9d9d9;
-  --ring: #00b8c4;
-  --radius: 0px;
-}
-
-.dark {
-  --background: #050505;
-  --foreground: #e5e2e1;
-  --card: #131313;
-  --card-foreground: #e5e2e1;
-  --primary: #00F0FF;
-  --primary-foreground: #00363a;
-  --secondary: #BC00FF;
-  --secondary-foreground: #520071;
-  --muted: #353534;
-  --muted-foreground: #b9cacb;
-  --accent: #00F0FF;
-  --accent-foreground: #00363a;
-  --border: #3b494b;
-  --input: #3b494b;
-  --ring: #00F0FF;
+  --spacing-margin: 48px;
+  --spacing-unit: 4px;
+  --spacing-section-gap: 160px;
+  --spacing-stack-md: 40px;
+  --spacing-stack-sm: 16px;
+  --spacing-stack-lg: 80px;
+  --spacing-container-max: 1440px;
+  --spacing-gutter: 24px;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground font-body;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading uppercase tracking-tighter;
+    background-color: #050505;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(206, 93, 255, 0.05) 0%, transparent 50%);
+    overflow-x: hidden;
+    @apply text-on-surface antialiased;
   }
 }
 
-@layer utilities {
-  .text-glow-primary {
-    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+@layer components {
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
   }
-  .text-glow-secondary {
-    text-shadow: 0 0 10px rgba(188, 0, 255, 0.5);
+
+  .glitch-text {
+    position: relative;
   }
-  .bg-noise {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3C/filter%3%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3C/svg%3");
-    opacity: 0.05;
+  .glitch-text::before, .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
   }
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 #00f0ff;
+    clip: rect(24px, 550px, 90px, 0);
+  }
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 #ce5dff;
+    clip: rect(85px, 550px, 140px, 0);
+  }
+
   .brutalist-border {
-    border: 1px solid var(--border);
+    border: 1px solid rgba(0, 240, 255, 0.3);
   }
-  .clipped-corner {
+  
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(206, 93, 255, 0.4);
+  }
+
+  .clip-corner {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
   }
 }

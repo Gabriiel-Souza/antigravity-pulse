@@ -3,6 +3,7 @@ import { HeroSection } from "@/features/landing-page/components/HeroSection";
 import { LineupSection } from "@/features/landing-page/components/LineupSection";
 import { TicketsSection } from "@/features/landing-page/components/TicketsSection";
 import { Footer } from "@/features/landing-page/components/Footer";
+import { AudioPlayer } from "@/features/landing-page/components/AudioPlayer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <LineupSection />
       <TicketsSection />
       <Footer />
+      <AudioPlayer />
     </main>
   );
 }
