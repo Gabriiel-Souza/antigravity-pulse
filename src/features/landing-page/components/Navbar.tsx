@@ -30,7 +30,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <Button className="font-heading tracking-widest uppercase px-8">
+        <Button className="font-heading tracking-widest uppercase px-8" variant="secondary">
           GET TICKETS
         </Button>
       </div>

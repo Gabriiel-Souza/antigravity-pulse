@@ -30,10 +30,10 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="h-16 px-12 text-lg font-bold tracking-widest">
+          <Button size="xl" className="font-bold tracking-widest">
             ENTER THE VOID
           </Button>
-          <Button size="lg" variant="outline" className="h-16 px-12 text-lg font-bold tracking-widest bg-transparent">
+          <Button size="xl" variant="outline" className="font-bold tracking-widest">
             VIEW LINE-UP
           </Button>
         </div>
