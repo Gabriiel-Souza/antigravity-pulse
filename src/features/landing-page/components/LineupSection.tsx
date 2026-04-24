@@ -5,19 +5,19 @@ export function LineupSection() {
     {
       name: "KINETIC VOID",
       stage: "HEADLINER // STAGE ALPHA",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDsduTCz0b2U4YX9OpkePPpIsZ5IqFRoU-NBgWcg25SKKu5SYRLmQuqNQ2S3g9RHyZluy7BhvJaGPv6DyWX33vNndnPERXWFXGOigApW4P3mNiiIZM9v1gwGgBTFZ9LG1hor8mQMdhYULooQKHuvTzPcVHd3q63rwHVvUHzV6XAB9gtNRcgq90gSY1X5rXyNIpjyuPlY6cqAbxAD3qqAj2VWare2nSaY6qH9vVRXNMXNToBti9UShVcuHJlSYpHj9K3uzKtByoAkbo",
+      image: "/antigravity-pulse/images/lineup/kinetic_void.png",
       large: true
     },
     {
       name: "NEURAL NET",
       stage: "NEURAL NET",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBHRlpmVK8IrEJBJ7cJUpaeiRrzrtmBaiHGz5JQ2wfYioA0njFUq_HPFbz5FM4WR7TqcHVzChLPXno6HXN8bxXtZLxTgRZBNKqR_uOBQ7KNRHWZPsmG2lF9i63ViZXiOkoMpsw_p8dsXZtmW0t5hG12hCANHBARrxQGgGXHRzM3qALCENLaSBW7S-NhWJ_MJFR8h3BzqO3K19BR4hM2CIJeq6ekptj4bm4pmohdFKJVNsfexJhkjCnuNRVoQl_b7cRFIwhSI3cT-yk",
+      image: "/antigravity-pulse/images/lineup/neural_net.png",
       large: false
     },
     {
       name: "SYNKRO",
       stage: "SYNKRO",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAuN6VqDXYXORrjPZ2CoINu18wtAzfNLJ6pW4G3YC-DNvNNcxQSUeMlhNAuPPeYv8bFc1QPSZAGa7phLwxIl2rmLXY-e2NM9CUib8xDko8zIsT_FOg5ueHCP-1X4sZ6bpTZRtF585RzEE8eMll_4tyYiYqsRSSJ3A_qt0gSm9B3qtfAb5pLjOYz6EkZYmEGJegIXwrlcWjhgpot_8YOiqoq1pkQv7SJWFPp3ixBr_MZ5mVwVMrenC0sLwRG88W4jaH4628n07axKkg",
+      image: "/antigravity-pulse/images/lineup/synkro.png",
       large: false
     }
   ];
