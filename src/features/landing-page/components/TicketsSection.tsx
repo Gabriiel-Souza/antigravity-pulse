@@ -32,7 +32,7 @@ export function TicketsSection() {
               Logística VIP
             </li>
           </ul>
-          <button className="w-full py-4 border border-cyan-400/50 text-cyan-400 font-label-mono uppercase hover:bg-cyan-400 hover:text-black transition-colors rounded-none">
+          <button className="w-full py-4 border border-cyan-400/50 text-cyan-400 font-label-mono uppercase hover:bg-cyan-400 hover:text-black transition-colors rounded-none cursor-pointer">
             SELECIONAR
           </button>
         </div>
@@ -62,7 +62,7 @@ export function TicketsSection() {
               Bares Dedicados
             </li>
           </ul>
-          <button className="w-full py-4 bg-cyan-400 text-black font-label-mono uppercase hover:bg-white transition-colors rounded-none glow-cyan">
+          <button className="w-full py-4 bg-cyan-400 text-black font-label-mono uppercase hover:bg-white transition-colors rounded-none glow-cyan cursor-pointer">
             SELECIONAR
           </button>
         </div>
@@ -89,7 +89,7 @@ export function TicketsSection() {
               Pacote de Merch Exclusivo
             </li>
           </ul>
-          <button className="w-full py-4 border border-purple-500/50 text-purple-400 font-label-mono uppercase hover:bg-purple-500 hover:text-white transition-colors rounded-none">
+          <button className="w-full py-4 border border-purple-500/50 text-purple-400 font-label-mono uppercase hover:bg-purple-500 hover:text-white transition-colors rounded-none cursor-pointer">
             SELECIONAR
           </button>
         </div>

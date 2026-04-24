@@ -35,7 +35,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <button className="bg-cyan-400 text-black px-6 py-2 font-space-grotesk uppercase tracking-tighter font-black hover:skew-x-[-12deg] hover:bg-cyan-400 hover:text-black transition-all duration-75 active:scale-95 ease-in">
+        <button className="bg-cyan-400 text-black px-6 py-2 font-space-grotesk uppercase tracking-tighter font-black hover:skew-x-[-12deg] hover:bg-cyan-400 hover:text-black transition-all duration-75 active:scale-95 ease-in cursor-pointer">
           GET TICKETS
         </button>
       </nav>

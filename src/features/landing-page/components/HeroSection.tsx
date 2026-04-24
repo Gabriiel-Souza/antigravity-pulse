@@ -22,7 +22,7 @@ export function HeroSection() {
             Uma descida multissensorial ao brutalismo futurista. 48 horas de frequências eletrônicas ininterruptas.
           </p>
           
-          <button className="bg-primary-container text-on-primary-container px-12 py-6 font-label-mono text-label-mono uppercase tracking-[0.2em] font-bold hover:bg-secondary-container hover:text-on-secondary-container hover:-translate-y-1 transition-all duration-150 border-none rounded-none shadow-[0_0_30px_rgba(0,240,255,0.3)]">
+          <button className="bg-primary-container text-on-primary-container px-12 py-6 font-label-mono text-label-mono uppercase tracking-[0.2em] font-bold hover:bg-secondary-container hover:text-on-secondary-container hover:-translate-y-1 transition-all duration-150 border-none rounded-none shadow-[0_0_30px_rgba(0,240,255,0.3)] cursor-pointer">
             GARANTIR INGRESSO
           </button>
         </div>

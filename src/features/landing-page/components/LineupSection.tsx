@@ -40,7 +40,7 @@ export function LineupSection() {
 
       <div className="grid grid-cols-12 gap-gutter auto-rows-[250px]">
         {/* Artist Card 1 (Large) */}
-        <div className="col-span-12 md:col-span-8 row-span-2 group relative overflow-hidden bg-surface-container-lowest clip-corner brutalist-border">
+        <div className="col-span-12 md:col-span-8 row-span-2 group relative overflow-hidden bg-surface-container-lowest clip-corner brutalist-border cursor-pointer">
           <img 
             alt={artists[0].name} 
             className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500 scale-105 group-hover:scale-100" 
@@ -54,7 +54,7 @@ export function LineupSection() {
         </div>
 
         {/* Artist Card 2 */}
-        <div className="col-span-12 md:col-span-4 row-span-1 group relative overflow-hidden bg-surface-container-lowest border-t border-l border-cyan-400/30">
+        <div className="col-span-12 md:col-span-4 row-span-1 group relative overflow-hidden bg-surface-container-lowest border-t border-l border-cyan-400/30 cursor-pointer">
           <img 
             alt={artists[1].name} 
             className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500 scale-105 group-hover:scale-100" 
@@ -66,7 +66,7 @@ export function LineupSection() {
         </div>
 
         {/* Artist Card 3 */}
-        <div className="col-span-12 md:col-span-4 row-span-1 group relative overflow-hidden bg-surface-container-lowest border-b border-r border-purple-500/30">
+        <div className="col-span-12 md:col-span-4 row-span-1 group relative overflow-hidden bg-surface-container-lowest border-b border-r border-purple-500/30 cursor-pointer">
           <img 
             alt={artists[2].name} 
             className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500 scale-105 group-hover:scale-100" 
